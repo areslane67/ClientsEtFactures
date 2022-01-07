@@ -5,6 +5,9 @@ import java.util.List;
 
 public class Client
 {
+	private String nom;
+	private List<Facture> factures = new ArrayList<Facture>();
+	private static List<Client> clients = new ArrayList<Client>();
 	/** 
 	 * Crée un client.
 	 * @param nom le nom du client. 
@@ -12,6 +15,8 @@ public class Client
 	
 	public Client(String nom)
 	{
+		this.nom = nom;
+		clients.add(this);
 	}
 
 	/**
